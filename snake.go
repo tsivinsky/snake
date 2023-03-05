@@ -17,7 +17,10 @@ func (s *Snake) Render() {
 	for _, block := range s.blocks {
 		x, y := block[0], block[1]
 		screen.MoveCursorTo(x, y)
+
+		fmt.Printf(string(screen.ColorGreen))
 		fmt.Printf("x")
+		fmt.Printf(string(screen.ColorReset))
 	}
 
 	screen.MoveCursorTo(s.head[0], s.head[1])

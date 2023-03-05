@@ -14,8 +14,9 @@ type Apple struct {
 func (a *Apple) Render() {
 	screen.MoveCursorTo(a.x, a.y)
 
-	// fmt.Printf(string(screen.Colors.Red), "o", string(screen.Colors.Reset))
+	fmt.Printf(string(screen.ColorRed))
 	fmt.Printf("o")
+	fmt.Printf(string(screen.ColorReset))
 }
 
 func (a *Apple) Spawn(x, y int) {
