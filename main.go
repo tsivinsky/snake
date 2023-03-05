@@ -85,6 +85,10 @@ func main() {
 			os.Exit(0)
 		}
 
+		if snake.IsCollidingWithItself() {
+			os.Exit(0)
+		}
+
 		apple.Render()
 		snake.Render()
 

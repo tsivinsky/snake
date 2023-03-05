@@ -96,3 +96,15 @@ func (s *Snake) IsOutOfBounds(w, h int) bool {
 
 	return false
 }
+
+func (s *Snake) IsCollidingWithItself() bool {
+	x, y := s.head[0], s.head[1]
+
+	for _, block := range s.blocks {
+		if x == block[0] && y == block[1] {
+			return true
+		}
+	}
+
+	return false
+}
